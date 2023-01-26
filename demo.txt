@@ -1,0 +1,152 @@
+function App() {
+
+//   let a = ["ab","bc","de"]
+//   let b = ["abc","xyz"]
+//   let age = [18,56,80,90]
+//   //document.write(age)
+
+//   console.log(a)
+
+//   a.push("abc")
+//   console.log(a)
+
+//   a.pop()
+//   console.log(a)
+
+//   //remove 1st:-
+//   a.shift()
+//   console.log(a)
+
+//   a.unshift("abcd")
+//   console.log(a)
+
+
+//   //merging array :-
+//   let c = a.concat(b)
+//   console.log(c)
+
+
+//   //filtering :-
+//   console.log(age.filter(fil1))
+//   function fil1(age)
+//   {
+//     return age>20
+//   }
+  
+//   //sort - reverse
+//   console.log(age.reverse())
+
+//   console.log(age.sort())
+
+//   console.log(age.length)
+
+//   //loops :-
+//   age.forEach(age=>console.log(age))
+
+//   let i=0
+//   for(i; i<=5 ;i++)
+//   {
+//     console.log(i)
+//   }
+  
+//   //objects :-
+//  let aw = {
+//   name:"abc",
+//   surname:"xyz",
+//   mobile:12345645
+//  }
+//  for(let i1 in aw)
+//  {
+//     console.log(aw[i1])
+//  }
+  
+//     //date
+//  let a1 = new Date()
+//  document.write(a1)
+//  document.write("<br>")
+
+//  let a2 = new Date()
+//  let a3 = a2.getFullYear()
+//  document.write(a3)
+//  document.write("<br>")
+
+//  let a4 = new Date()
+//  let a5 = a4.getHours()
+//  document.write(a5)
+// document.write("<br>")
+
+// document.write(Math.random())
+
+
+// // Set - Map objects :-
+
+// let n1 = new Set()
+// n1.add(1)
+// n1.add(2)
+// n1.add(3)
+// n1.add(1)
+
+// n1.forEach(n1=>console.log(n1))
+
+// // Map :-
+// let n2 = new Map()
+// n2.set(1,'abc')
+// n2.set(2,'xyz')
+
+// let n3 = n2.entries()
+// console.log(n3.next().value)
+
+// // Get :-
+// let n5 = n2.get(2)
+// console.log(n5)
+
+// //Map (size,delete) :-
+// let n6 = n2.size
+// console.log(n6)
+
+// let n7 = n2.delete
+// console.log(n7)
+
+// //return ( true - false)
+// let n8 = n2.has(1)
+// console.log(n8)
+
+// //type of :- returns object:
+// let n9 = typeof n2
+// console.log(n9)
+
+// //key - value return :-
+// let n10 = n2.keys()
+// console.log(n10)
+
+// let n11 = n2.values()
+// console.log(n11)
+
+// // Dynamic values :-
+// let b1 = "hello"
+// let b2 = 'b1'
+// console.log(eval(b2))
+ 
+    //const s1 = "kahsyap"
+    //const s2 = "ajay"
+    //document.write(s1.localeCompare(s2))
+    //document.write(s1==s2)
+    //document.write(s1===s2)
+    
+    //const s3 = s1.localeCompare(s2)
+    //document.write(s3)
+    //document.write("<br>")
+
+  return (
+    <div className="App">
+        <h1> hello react..</h1>
+          <input type="no" id="a1">
+              
+          </input>
+     </div>
+);
+    
+
+}
+
+
