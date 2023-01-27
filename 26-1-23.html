@@ -1,0 +1,399 @@
+<html>
+    <body>
+        <h1> String Methods </h1>
+        <script>
+            
+            //length 
+            let a ="hello  "
+            let f ="nice to meet you"
+            let g = "how are you"
+            let p = "HELLLOOO"
+            let z = "hello nice hiii hello good great good"
+
+            document.write(a.length)
+            document.write("<br>")
+
+
+            //slice , substring , substr (same methods)
+            //slice =>(extracts string part , return new string)
+    //         let b = "hello good morning"
+    //         let c =  document.write(b.slice(6,18))
+    //         document.write("<br>")
+
+    //         //slice end to front
+    //         let d = document.write(b.slice(-19))
+    //         document.write("<br>")
+
+    //         //substring :-
+    //         let e = document.write(f.substring(0,16))
+    //         document.write("<br>")
+
+    //         //substr :-
+    //         let q = document.write(g.substr(0,11))
+    //         document.write("<br>")
+
+    //         //upper and lowercase :-
+    //         let w = document.write(f.toUpperCase())
+    //         document.write("<br>")
+
+    //         let r = document.write(p.toLowerCase())
+    //         document.write("<br>")
+
+    //         //Replace => (specified value with another value)
+    //         let t = document.write(p.replace("HELLLOOO","jai shree krishna"))
+    //         document.write("<br>")
+
+    //         //concat (join 2 strings)
+    //         let u = document.write(a.concat(f))
+    //         document.write("<br>")
+
+    //         //trim(remove whitespace both side)
+    //         let i = document.write(a.trim())
+    //         document.write("<br>")
+
+    //         //trimRight(remove w.space frontend)
+    //         let x = document.write(a.trimRight())
+    //         document.write("<br>")
+
+    //         //trimLeft(remove from left)
+    //         //let c = document.write(a.trimLeft())
+
+
+    //         //padstart(padding given from start point)
+    //         let a1 = "java"
+    //         let a2 = document.write(a1.padStart(7,'*'))
+    //         document.write("<br>")
+
+    //         //panend(padding ending)
+    //         let a3 = document.write(a1.padEnd(7,'*'))
+    //         document.write("<br>")
+
+    //         //charAt (returns character specified index)
+    //         let a4 = document.write(a1.charAt(3))
+    //         document.write("<br>")
+
+            
+    //         //split(split string by (, | .....))
+    //         let a5 = a1.split(" * ")
+    //         let j=""
+    //         for(let i=0;i<a5.length();i++)
+    //         {
+    //             j+=a5[i]+"<br>"
+    //         }
+    //         document.write(j)
+    // </script>
+
+
+<!-- ******************************************  Number Vs String    *******************************************-->
+              
+
+                 <!-- <h1> Number Vs String</h1> -->
+                <script>
+                    // let m1 = prompt("enter no or string")
+                    // if(m1 ==="number")
+                    // //if(Number.isFinite(m1)) => determines passed value is finite(number or not ).
+                    // {
+                    //     document.write("Number msg :- "+m1)
+                    //     console.log("Number msg :- "+m1)
+                    // }
+                    // else
+                    // {
+                    //     document.write("String msg :- "+m1)
+                    // }
+
+
+//                     let d1 = 123
+//                     let d2 = "kahsyap"
+//                     document.write(typeof(d1))  //number
+//                     document.write("<br>")
+//                     document.write(typeof(d2))  //string
+//                     document.write("<br>")
+                    
+
+//                     //convert numbers to strings  :-
+//                     document.write(d2.toString(d1))
+//                     document.write("<br>")
+//                 </script>
+
+
+// <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  Operators   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
+                
+//                 <h1> Operators </h1>
+//                 <script>
+
+//                         // Assignment Operators :-
+//                         let s1 = 10
+//                         document.write(s1)
+//                         document.write("<br>")
+                
+//                         let s6 = "hello"
+//                         let s7 = "good morning"
+//                         document.write(s6+=s7) //increment important 
+//                         document.write("<br>")
+
+//                         let g1 = 10
+//                         let g2 = 5
+//                         document.write(g1-=g2)//decrement
+//                         document.write("<br>")
+                        
+
+//                         //Arithmetic Operators :-
+//                         let s2 = 20
+//                         let s3 = s1+s2
+
+//                         document.write("addition is :-"+s3)
+//                         document.write("<br>")
+                
+//                         let s4 = s2-s1
+//                         document.write("subtraction is :-"+s4)
+//                         document.write("<br>")
+                
+//                         let s5 = s2*s1
+//                         document.write("multiplication is :-"+s5)
+//                         document.write("<br>")
+                
+
+                        
+                        //,Operators :-
+                         let g3 = 10
+                         let g4 = 10
+                         let g5 = 'abc'
+                         let g6 = 'abc'
+                      
+                        if(g3==g4) 
+                        {
+                            document.write("Same No")
+                        }
+                        else{
+                            document.write("Not")
+                        }
+                        document.write("<br>")
+
+
+                        // equal value with equal type :-
+                        if(g3 === g5)
+                        {
+                            document.write("value and type matched")
+                        }
+                        else
+                        {
+                            document.write("Not matched")
+                        }
+                        document.write("<br>")
+
+
+                        //greater and less than :-
+                        if(g4>g3)
+                        {
+                            document.write("g4 is greater")
+                        }
+                        else if(g3>g4){
+                            document.write("g4 is lessthan")   
+                        }
+                        else{
+                            document.write("NAN")
+                        }
+                        document.write("<br>")
+
+                        
+                        //not equal value and type :-
+                         if(g3!=g5)
+                         {
+                           document.write("values not equals")
+                         }
+                         else if(g3!==g5)
+                         {
+                           document.write("values with types are not equals")
+                         }
+                         else
+                         {
+                            document.write("NAN")
+                         }
+                        document.write("<br>")
+
+
+                        //Logical Operators :-
+                        if(g3 == g4 && g5 == g6) // and operator
+                         {
+                            document.write("both matched...")
+                         }
+                         else if(g3 == g4 || g5 == g6) // or operator
+                         {
+                            document.write("matched...")
+                         }
+                         else
+                         {
+                            document.write("Not Matched...")
+                         }
+                         document.write("<br>")
+
+
+                         // Bitwise Operators :- work on 32 bit number
+                         let f1 = 5
+                         let f2 = 1
+                         document.write(f1 & f2)
+                         document.write("<br>")
+
+                            //pandding :=
+                </script>
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  Array   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+                <h1> Array </h1>
+                <script>
+                     //Array methods :=
+                     let j1 = [1,2,3,4,5,6,7,8]
+                     let j2 = [2,4,6,8,1,3,5,9]
+                        
+                     document.write(j1)
+                //      document.write("<br>")
+                    
+                //      document.write(j2)
+                //      document.write("<br>")
+
+
+                //      // join array :-
+                //     document.write(j1.concat(j2))
+                //     document.write("<br>")
+                
+                
+                //     //length :=
+                //     document.write(j1.length)    
+                //     document.write("<br>")
+
+
+                //     //slice :=
+                //     let j3 = document.write(j1.slice(3,7))    
+                //     document.write("<br>")
+                
+
+                //     //toString := converts array to string 
+                //     let j4 = document.write(j2.toString())
+                //     document.write("<br>")
+
+
+                //     //push and pop :=
+                //     let j6 = document.write(j1.push(10))
+                //     document.write("<br>")
+                //     document.write(j1)
+                //     document.write("<br>")
+                    
+
+                //     let j7 = document.write(j2.pop())
+                //     document.write("<br>")
+                //     document.write(j2)
+                //     document.write("<br>")
+
+
+                //     //shift := removes first array element
+                //     let k1 = document.write(j1.shift())
+                //     document.write("<br>")
+
+                    
+                //     //unshift := adds new element to array  beginning 
+                //     let k2 = document.write(j1.unshift(12))
+                //     document.write("<br>")
+                //     document.write(j1)
+                //     document.write("<br>")
+
+
+                //    //changes array elements :=
+                //    let  k3 = j2[4] = 10
+                //    document.write(j2)
+                //    document.write("<br>")
+
+
+                //    //delete := 
+                //    let k4 = delete j2[4]
+                //    document.write(j2)
+                //    document.write("<br>")
+
+
+                //   //splice := add new items and takes 2 parameters
+                //   let ab = ["kp","ajay","rahul","pooja"]
+                //   document.write(ab)
+                //   document.write("<br>")
+
+
+                // //   let ba = (ab.splice(2,3,'ravi','sujit'))
+                // //   document.write(ba)
+                // //   document.write("<br>")
+                // //   document.write(ab)
+
+                  
+                //   //slice  := used creates new array
+                //   let bc = ab.slice(0,3) // 0 is starting and 3 is ending index value
+                //   document.write(bc)
+                //   document.write("<br>")
+ 
+
+                //   //sort := sorting array 
+                //   let cb = document.write(ab.sort())
+                //   document.write("<br>")
+
+
+                //   //reverse := reversing array
+                //   let cv = document.write(ab.reverse())
+                //   document.write("<br>")
+
+                  
+                //   // min and max find values from array  :=
+                //   let ae = [1,3,5,8,10,15,45,89,100,22,74,21]
+                //   ae.sort(function(c,d){return c-d})
+                //   document.write(ae[0])
+                //   document.write("<br>")
+
+
+                //   // maximum find :=
+                //  let ea = document.write(Math.max(2,5,10))
+                //  document.write("<br>")
+
+                //  let da = document.write(Math.min(1,2,3,4,5))
+                //  document.write("<br>")
+    </script>
+
+<!-- -----------------------------------------  Map , Reduce , Filter -------------------------------------------->
+    
+        <h1> Map , Reduce , Filter</h1>
+
+        <script>
+
+            //   convert Decimal to Binary  := 
+
+            //   let l1 = parseInt(prompt('Enter a decimal number: '));
+            //   let l2 = l1.toString(2);    
+            //   document.write('Binary:' + ' ' + l2)
+
+
+                // Map => creating new array from existing array  
+               let old = [1,2,3,4,5]
+               function abc(value , index ,array)
+               {
+                    return value + 10
+               }
+              let mn = old.map(abc)
+              document.write(mn)
+              document.write("<br>")
+
+               // 2nd way of map :=
+              let new1 = ar1 => ar1 * 5
+              let sw = old.map(new1)
+              document.write(sw)
+              document.write("<br>")
+
+           
+              // filter :=> used to filter values based on condition
+              let age = [10,25,56,60,78]
+              let oldage = age.filter(sd => sd > 58)
+              document.write(oldage)
+              document.write("<br>")
+
+
+              //reduce :=>   final result reduce all elements of the array , return single value
+              let p1 = [5,2,1,3,9]
+              let p2 = p1.reduce((f1,f2) => f1 * f2)
+              document.write(p2)
+              document.write("<br>")
+
+        </script>
+    </body>
+</html>
