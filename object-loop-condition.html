@@ -1,0 +1,292 @@
+<html>
+    <body>
+        <h1> Obejcts and Methods </h1>
+
+        <script>
+            let a = {
+                name:"kashyap",
+                surname:"pandya",
+                no:123456789
+            }
+            //access all values at time :-
+            document.write(a.name+" , " +a.surname+" , " +a.no)
+            document.write("<br>")
+
+
+            //display partiucular value :-
+            document.write(a.name)
+            document.write("<br>")
+
+
+            //display Object using Loop :-
+            for(let b in a)
+            {
+                document.write(a[b])
+            }   
+            document.write("<br>")
+
+
+            // var a1 = 10
+            // {
+            //     let a2 = 20
+            //     document.write(a2)
+            //     document.write("<br>")
+
+            //     a2 = 50
+            //     document.write(a2)
+            //     document.write("<br>")
+
+            // }
+
+            // document.write(a1)
+            // document.write("<br>")
+
+
+            // const a3 = 30
+            // document.write(a3)
+        </script>
+
+
+        <h1> class object Methods costructor </h1>
+        <script>
+            class abc{
+                constructor(id,name)
+                {
+                    this.id=id
+                    this.name =name
+                }
+
+                display()
+                {
+                    document.write(this.id +" , "+this.name)
+                }
+            }
+
+            let s1 = new abc(1,'kashyap')
+            s1.display()
+            document.write("<br>")
+        </script>
+
+
+        <h1> object prototype </h1>
+        <script>
+            const family={
+                n1:'abc',
+                n2:'xyz',
+                n3:'12'
+            }
+            document.write(family.n1+ " , " +family.n2+ " , " +family.n3)
+            document.write("<br>")
+
+
+            // prototype property allows you to add new properties to object constructors :=
+            function show(id,name,surname)
+            {
+                this.id=id
+                this.name=name
+                this.surname=surname
+            }           
+            let d1 = new show(1,'ram','boricha')
+            document.write(d1.id +" , " +d1.name+ " , " +d1.surname)
+            document.write("<br>")
+
+            show.prototype.mark = 75
+            document.write(d1.mark)
+            document.write("<br>")
+
+
+            //function expression :=
+            let f1 = function(weight1 , weight2)
+            {
+                return weight1 * weight2
+            }
+            document.write(f1(20,10))
+            document.write("<br>")
+
+            
+            //function declaration :=
+            function f2(weight5 , weight6)
+            {
+               return weight5 * weight6
+            }
+            document.write(f2(20,45))
+            document.write("<br>")
+            
+            
+            //Object iterator defines how to display sequence of value from object.
+            let c1 = "good morning"
+            let txt =""
+            // for(let c2 of c1)
+            // {
+            //   txt += c2 +"<br>"
+            // }
+            // document.write(txt)
+            // document.write("<br>")
+
+
+            // Nested if := if statements inside another if statements called nested if.
+            let g1 = 20
+            let g2 = 12
+            if(g1 > g2)
+            {
+                document.write("g1 is bigger")
+                document.write("<br>")
+
+
+                if(g2 < g1)
+                {
+                    document.write("g2 is lesser")
+                    document.write("<br>")
+
+                }
+            }
+            else
+            {
+                document.write("NAN...")
+            }
+            document.write("<br>")
+
+
+            //else - if ladder :=
+            let g3 = 50
+            let g4 = 50
+            let g5 = 40
+
+            if(g3 < g5)
+            {
+                document.write("g3 is bigger")
+            }
+            else if(g3 == g4)
+            {
+                document.write("both are equal....")
+            }
+            else
+            {
+                document.write("NAN")
+            }
+            document.write("<br>")
+
+
+            //Swtich - Case :=  select one of many code blocks to be executed...
+           
+        //    let grade = prompt("enter grade value...")
+        //     switch(grade)
+        //     {
+        //         case 'A' : 
+        //         document.write('Very Good Job');
+        //         break
+
+        //         case 'B':
+        //         document.write('Good Job');
+        //         break
+
+        //         case 'C':
+        //         document.write('Not Good Job');
+        //         break
+
+        //         case 'D':
+        //         document.write('failed...');
+        //         break
+
+        //       default : document.write("unknown grade...")
+        //       document.write("<br>")
+
+        //      }
+        // 
+        
+        //       //loops :=
+        //       let text ="";
+        //       for(let k1=0; k1<10; k1++)
+        //       {
+        //         document.write(k1+ "<br>")
+        //       }
+            
+        //       //while :=
+        //     let t1 = 0
+        //     while(t1 < 10)
+        //     {
+        //         t1++
+        //         document.write(t1+"<br>")
+        //     }
+
+        //     //do - while :=
+        //    let t2 = 0
+        //    do
+        //    {
+        //         t2++
+        //         document.write(t2+"<br>")
+        //    }
+        //    while(t2 < 10)
+
+
+        //for - in loop =>  working only index
+        let t3 = "good morning"
+        for (let t4 in t3)
+        {
+            document.write(t3[t4])
+        }
+        document.write("<br>")
+      
+
+        
+    //     let l1 = 
+    //     {
+    //         'name':'kahsyap',
+    //         'surname':'pandya',
+    //         'mark' : 80
+    //     }
+    //     for(let l2 in l1)
+    //     {
+    //         document.write(l1[l2])
+    //     }
+    //     document.write("<br>")
+
+        
+    //     //for - of loop :=>  working on index values
+    //    let p1 = ['kp','rv','sv','dp']
+    //    for(let p2 of p1)
+    //    {
+    //     document.write(p2+"<br>")
+    //    }
+
+
+
+        // let p1 = [1,2,3,4,5]
+
+        // let p1 = []
+        // let size = 5
+        // for(let i=0 ; i<size; i++)
+        // {
+        //     p1[i] = prompt("enter value...")
+        // }
+        // document.write(p1)
+
+        document.write("<br>")
+
+
+        //ternary (Conditional) :=
+        let age = 25
+        let age12 = age >= 22 ? "True" : "False"
+        document.write(age12)
+        document.write("<br>")
+
+
+
+        //CallBack Funation :=> 
+        function show(new1)
+        {
+            document.write(new1)
+        }
+        
+        function display(j1 , j2 , callback)
+        {
+                let sum = j1 + j2
+                callback(sum)
+        }
+        display(10 , 5 ,show)
+        document.write("<br>")
+
+
+    </script>
+ </body>
+</html>
