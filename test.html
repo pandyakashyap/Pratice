@@ -1,0 +1,292 @@
+<html>
+    <body>
+        <!-- Import json file -->
+        <script type="text/javascript" src="data.json"></script>
+
+
+        <script>
+
+            // let a = prompt("enter no")
+            // let temp =a 
+            // d=0
+            // while(a > 0)
+            // {
+            //      c = a % 10
+            //      d = (d * 10) + c
+            //      a=parseInt(a/10)
+
+            // }
+            // if(temp == d)
+            //     {
+            //         document.write("no is palindrom")
+            //     }
+            //     else{
+            //         document.write("not palindrom")
+            //     }
+            // // document.write(a)
+
+            // document.write("<br>")
+
+
+        //     let a = 9; 
+        //     for (let i = 1; i <= a; i++)
+        //      {
+        //         let k="";
+        //         for (let j = 1; j <= a - i + 1; j++) 
+        //         {
+        //             k+= j;
+        //             k+= " ";
+        //         }
+                
+        //         document.write(k)
+               
+        //             for(let l=a-1; l>i-1; l--)
+        //             {
+        //                 document.write("\n",l)   
+        //             }
+                
+        //             document.write("</br>")
+        //      }
+
+        // 
+        
+            //    for(let i=0;i<9;i++)
+	        //    {
+		    //         for(let j=0;j<i;j++)
+	        // 	       {		
+			//              document.write("&nbsp&nbsp")
+		    //         }
+		    //         for(let k=1;k<=9-i;k++)
+		    //         {
+			//             document.write(k)
+		    //         }   
+		    //         for(let d=9-i-1;d>=1;d--)
+		    //         {
+			//             document.write(d)
+            //         }
+            //         document.write("<br>")
+            //     }
+        </script>
+
+            <h1> Funation and it's scope</h1>
+            <script>
+
+                var a = 'abc'   //global scope => can access any where 
+                function show()
+                {
+                    let a = 'kahsyap'   //local scope => access only function scope
+                    document.write(a)
+                    document.write("<br>")
+                }
+                show()
+                document.write(a)
+
+
+                // Json Get Api :=
+                fetch('http://time.jsontest.com')
+                .then(res => res.json())
+                .then((out) => {
+                    console.log('output',out)
+                }).catch(err => console.error(err))
+
+
+                
+                //read json file data :=
+                let d1 = JSON.parse(data12)
+                console.log(d1)
+
+                
+                //write data into Json file :=
+                //let d2 = '[{"id":3,"name":"sager","surname":"mandal","age":"30"]';
+
+                var fs = require(fs)
+                fs.writeFile("data.json", fs);
+
+                let d2 = {
+                    "id" : 3,
+                    "name":"sager",
+                    "surname":"mandal",
+                    "age":30
+                }
+
+                let d3 = JSON.stringify(d2)
+                
+                console.log(d3)
+
+                //console.log(data12)
+         </script>
+         <h1> oops concept </h1>
+
+         <script>
+          
+           function show(name,surname)
+           {
+            this.name=name
+            this.surname=surname
+           }
+           let l1 = new show('Kahsyap','Pandya')
+           document.write(l1.name+ "," +l1.surname)
+           document.write("<br>")
+
+           let l2 = new show('Ravi','Vadher')
+           document.write(`${l2.name} ${l2.surname}`)
+           document.write("<br>")
+
+           
+         //Encapsulation := process of wrapping properties and functions within a single unit...
+         class person
+         {
+                constructor(name,address)
+                {
+                    this.name=name
+                    this.address=address
+                }
+                getdet()
+                {
+                    document.write(`${this.name},${this.address}`)
+                }
+         }
+         let p1 = new person('kashyap','rajkot')
+         p1.getdet()
+         document.write("<br>")
+
+
+         //abstraction := used to hindig unnecessary details ..
+         //Note :=> A class cannot have more than one constructor method.
+         
+         class abs{
+
+            constructor(name,salary)
+            {
+                this.name=name
+                this.salary=salary
+            }
+            ab(name,salary)
+            {
+                document.write(`${this.name},${this.salary}`)
+            }
+         }
+
+         let a1 = new abs('kahsyap',1000000)
+         a1.ab()
+         document.write("<br>")
+           
+
+         //inheritance :=>  reusability of code  , use extends keyword 
+        class i1
+        {
+            // constructor()
+            // {
+            //     this.name="kahsyap"
+            //     this.car = "BMW"
+            // }
+
+            m1(bike,car)
+            {
+
+            }
+        }
+
+        class i2 extends i1
+        {
+            // constructor(name,surname,car)
+            // {
+            //     super();
+            //     this.name=name
+            //     this.surname=surname
+            //     this.car=car
+            // }
+          
+            m2(bike , car , price)
+            {
+                this.bike=bike
+                this.car=car 
+                this.price=price
+            }
+        }
+
+        let i3 = new i2()
+        i3.m2("honda","BMW",5000000)
+        document.write(i3.bike+ " , "+i3.car+ " , "+i3.price) 
+        document.write("<br>")
+
+
+        //multilevel inheritance :=
+        class i4 extends i2
+        {
+            m4(bike,car,price,color)
+            {
+                this.bike=bike
+                this.car=car 
+                this.price=price
+                this.color=color
+            }
+
+        }
+        let i5 = new i4()
+        i5.m4("dhoom","foutuner",7500000,"white")
+        document.write(i5.bike+ "," +i5.car+ "," +i5.price+ "," +i5.color)
+        document.write("<br>")
+
+
+
+        //hirarchical :=
+        class vehicle{
+            j1 = function(name)
+            {
+                
+            }
+        }
+        class car extends vehicle{
+            j2 = function(name,color,price)
+            {
+                   
+            }
+            
+        }
+
+        class bike extends vehicle{
+            j3 = function(name,color,price,gurante)
+            {
+                this.name=name
+                this.color=color
+                this.price=price
+                this.gurante=gurante
+            }
+        }
+
+        let j4 = new bike()
+        j4.j3("honda","red",2200000,1)
+        document.write(j4.name+ " ,"+j4.color+ "," +j4.price+ ","+j4.gurante)
+
+
+        //polymorphism :=  same function with different signatures
+        //same name multiple forms :=
+
+        class r1
+        {
+           r2(a)
+           {
+                document.write(a)
+           }
+           r3(b,c)
+           {
+                this.b=b
+                this.c=c
+           }
+           r4(d,e,f)
+           {
+                this.d=d
+                this.e=e
+                this.f=f
+           }
+        }
+
+        let r5 = new r1()
+        r5.r2(10)
+        r5.r3(10,15)
+        r5.r4(5,8,9)
+
+     </script> 
+    </body>
+</html>
