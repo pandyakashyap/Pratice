@@ -1,0 +1,223 @@
+<html>
+    <body>
+        <script>
+
+            //Sometimes we need a for creating many objects of the same "type".
+            //The best way to create is to use " Object Constructor Function... "
+
+            function person(id,name,surname)
+            {
+                this.id=id
+                this.name=name
+                this.surname=surname
+            }
+
+            let p1 = new person(1,'Kashyap','Pandya')
+            document.write(p1.id+ "," +p1.name+ "," +p1.surname)
+            document.write("<br>")
+
+            let p2 = new person(2,'Ravi','Vadher')
+            document.write(p2.id+ "," +p2.name+ "," +p2.surname)
+            document.write("<br>")
+
+
+            // Display Object in Loop :=
+            let a1 = {
+                'id' : 3,
+                'name':'Sager',
+                'surname':'Mandal'
+            }
+            
+            let txt =" ";
+            for(let a2 in a1)
+            {
+                txt += a1[a2] +","
+            }
+            document.write(txt)
+
+
+            // Display Objects Using Object.values()
+            let p3 = Object.values(a1)
+            document.write(p3)
+            document.write("<br>")
+
+
+
+            // Function() constructor :=> Calling the constructor
+            // directly can create functions dynamically..
+            let p4 = new Function('a','b','return a+b')
+            document.write(p4(10,5))
+            document.write("<br>")
+
+
+            //function expression :=> can be used to define a function inside an expression..
+            let p5 = function(d,f)
+            {
+                return d * f
+            }
+            document.write(p5(10,5))
+            document.write("<br>")
+
+            //Getter and Setter in class :=>
+            class g1
+            {
+                g2 = "hello good morning"
+
+                get g3()
+                {
+                    return this.g2
+                }
+
+                set g4(x)
+                {
+                    this.g2 = `hello ${x}`
+                }
+            }
+                let g5 = new g1()
+                document.write(g5.g2)
+                document.write("<br>")
+
+                msg = "afternoon"
+                document.write(g5.msg)
+                document.write("<br>")
+
+
+                //private fields in class :=
+                class pri
+                {
+                    #age 
+                    m1()
+                    {
+                        var j = 10
+                        document.write(j)
+                    }
+                    constructor()
+                    {
+                        this.#age = 55
+                        document.write(this.#age)
+                        document.write("<br>")
+                    }
+                }
+                class pri12 extends pri
+                {
+                    #moreage
+                    constructor()
+                    {
+                        super()
+                        this.#moreage=80
+                        document.write(this.#moreage)
+                        document.write("<br>")
+
+                        //document.write(this.#age) => is private can't access from anywhere
+                    }
+                }
+                let p6 = new pri12()
+                p6.m1()
+                document.write("<br>")
+
+
+                //JSON.stringify() => is used to convert to string ...
+                let z1 = 
+                {
+                    'id':4,
+                    'name':'sujit',
+                    'surname':'tankariya'
+                }
+                document.write(JSON.stringify(z1)) 
+                document.write("<br>")
+
+
+                //Parse() => convert string to javascript objects ...
+                let z2 = '{"id":5,"name":"sumit","surname":"rathod"}'
+                let z3 = JSON.parse(z2)
+                document.write(z3.id+ " ,"+z3.name+ " ,"+ z3.surname)
+                document.write("<br>")
+
+
+                //callback function :=> passed as argument to another function , 
+                //can run after another function has finished ..
+
+                function x1()
+                {
+                    document.write("hello good...")
+                    document.write('<br>')
+                }
+               function x2(j)
+               {
+                   document.write(j)
+                   document.write('<br>')
+               }
+               function x3(k,l)
+               {
+                  let sum = k + l
+                  x2(sum)
+               }
+
+               x2()
+               x1()
+               x3(20 , 22)
+
+
+               //Call-Back function  =>
+            //    function show(name)
+            //    {
+            //     alert(`hello ${name}`)
+            //    }
+
+            //    function Display(sd)
+            //    {
+            //     let as = prompt("enter your name")
+            //     show(as)
+            //    }
+            //    Display(show)
+
+
+                //Call - Back :=
+                // function k1()
+                // {
+                //     document.write("hello how are you...")
+                // }
+                // setTimeout(k1,1000)
+
+
+               //remove nagative no from array :=>
+               let x5 = [2,5,-1,6,7,-9]
+               document.write(x5)
+               document.write("<br>")
+
+               let v3 = x5.reduce((q3,q4) => q3+q4)
+               document.write(v3)
+               document.write("<br>")
+
+               //filter :=
+               let id = x5.filter(x => x >= 0)
+               document.write(id)
+               document.write("<br>")
+
+               //reduce := 
+              let v1 =[1,2,3,4,5]
+              let v2 = v1.reduce((q1,q2) => q1+q2)
+              document.write(v2)
+              document.write("<br>")
+
+             
+              // Promise with callback :=>
+            //   let pro = "kashyap"
+            //   new Promise().then((value) => {
+            //     document.write(pro)
+            //   })
+            //   .catch((err) => {
+            //     document.write(err)
+            //   })
+              
+            let pro = new Promise((resolve,reject) =>{
+                resolve(777)
+                
+            });
+            pro.then((val) => document.write("value is ",val));
+            document.write("logging...")
+
+
+        </script>
+    </body>
+</html>
