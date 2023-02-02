@@ -1,0 +1,187 @@
+<html>
+    <body>
+        <h1> Async Function</h1>
+
+        <script>
+
+
+            // Fetch data using normal way :=>
+            fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json',
+            {
+                method :"GET",
+                headers :{
+
+                }
+            }
+            ).then(Response =>{
+                console.log(Response)
+            })
+
+
+            //async and await :=
+            async function show()
+            {
+                let a1 = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json',
+                {
+                    method :'GET'
+                }
+                 )
+
+                let a2 = await response.Json()
+                console.log(a2)
+            }
+
+            
+            //fetch data in key and value pair :=>
+            //  async function f1()
+            //  {
+            //      try
+            //      {
+            //           let response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json')
+
+            //           if(!response.ok)
+            //           {
+            //              throw new Error(`HTTP error : ${response.status}`)
+            //           }
+
+            //           let dta = await response.json()
+                     
+            //           for(let i in dta)
+            //           {
+            //             document.write(JSON.stringify(dta[i]))
+            //             //console.log(JSON.stringify(dta[i]))
+            //             document.write("<br>")
+            //           }
+            //     }
+
+            //      catch(error)
+            //      {
+            //          document.write(`can not get data',${error}`)
+            //      }
+            //  }
+
+
+             //return promise :=>  
+            //  let promise = f1()
+            //  promise.then((dta) => console.log(dta[1]));
+
+            //  let promise1 = new promise1((resolve , reject) =>
+            // {
+            //     throw new Error("Something is wrong!");
+            // }).catch((error) => console.log(error));  
+         
+        </script>
+
+
+     <script>
+
+           let s1 = new Promise((resolve,reject)=> {
+            resolve(777);
+           })
+           s1.then((val) => document.write('error is ',val))
+           
+
+           //error - handling :=>
+           let d = 8
+           function j1(resolve,reject)
+           {
+            setTimeout(() => {
+                let s = 10
+                if(s < d)
+                {
+                    resolve(s)
+                }else 
+                {
+                    reject(`not solve :${s}`)
+                }
+            },1000)
+           }
+
+
+           //catch block :=
+        //    let s2 = new Promise((resolve,reject) => {
+        //     setTimeout(() => {
+        //         resolve('hello promise')
+        //     } ,500)
+        //    });
+
+        //    s2.then((value) => {
+        //     console.log(value)
+        //    })
+
+
+
+           //Methods :=> ( all , allsettled , any )
+
+           let f1 = new Promise((resolve,reject)=> {
+            setTimeout(() => {
+                resolve('hello promise 1')
+            },500)
+           });
+
+
+           let f2 = new Promise((resolve,reject)=> {
+            setTimeout(() => {
+                //resolve('hello promise 2 calling....')
+                reject(new Error('plz sorry...'))
+            },1000)
+           });
+
+           let f3 = new Promise((resolve,reject)=> {
+            setTimeout(() => {
+                resolve('hello promise 3 calling...')
+            },2000)
+           });
+
+
+           f1.then((value)=>{
+            console.log(value)
+           })
+
+           f2.then((value)=>{
+            console.log(value)
+           })
+
+           f3.then((value)=>{
+            console.log(value)
+           })
+          
+           
+           // All() Method := run all promise if error occur or not ...
+           let al1 = Promise.all([f1,f2,f3])
+           al1.then((value)=> {
+            console.log(value)
+           })
+
+
+           // All-Settled() Methos := if error occured then run other promise...
+           let al2 = Promise.allSettled([f1,f2,f3])
+           al2.then((value) => {
+            console.log(value)
+           })
+     </script>
+
+     <script>
+
+        //  Any Method() :=  returns a single Promise only ...
+        //   let pro1 = new Promise(reject(new Error('plz sorry...')))
+        //   let pro2 = new Promise((resolve) => setTimeout(resolve,50,'first execute.....'))
+        //   let pro3 = new Promise((resolve) => setTimeout(resolve,20,'second-excute.....'))
+         
+        //   let pro4 = [pro1 , pro2 , pro3]
+        //   Promise.any(pro4).then((value) => console.log(value))
+
+
+         // Race Method() => Wait until any of promises is fulfilled or rejected...
+        let x1 = new Promise((resolve,reject) => setTimeout(resolve,500,'1st run...'))
+        let x2 = new Promise((resolve,reject) => setTimeout(resolve,100,'2nd run...'))
+
+        
+         Promise.race([x1,x2]).then((value) => {
+            console.log(value)
+        })
+
+
+     </script>
+    </body>
+</html>
