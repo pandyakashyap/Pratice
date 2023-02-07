@@ -1,0 +1,246 @@
+<html>
+    <body>
+        <h2> Async and Await </h2>
+        
+        <script>
+
+            //Synchronous programming :=>thing happen one at e time...
+            //ASynchronous programming :=> maultiple thing happen at a same time...
+
+            //Three ways to write A-Synchronous programming :=>
+            //(Async / Wait , Promise , CallBack....)
+
+
+            // console.log("hello...") 
+            // setTimeout(() => {
+            // for(let i=0; i<=500; i++)
+            // {
+            //     console.log("good morning" ,i)
+            // }
+            // }, 1000);
+            // console.log("last print...")
+
+//-----------------------------------------------------------------------------------------
+
+            //Call - Back function :=> 
+        //     function display()
+        //     {
+        //         setTimeout(() => {
+                    
+        //             console.log('simple display functions...')
+        //         }, 3000);
+        //     }
+        //    // display()
+
+        //     function show(CallBack)
+        //     {
+        //         setTimeout(() => {
+        //             console.log('simple show function...')
+        //             CallBack()
+        //         }, 1000);
+
+        //     }
+        //     show(display)
+
+// ---------------------------------- Call Back  --------------------------------------
+        // const student = [
+
+        //    { name:'kashyap',surname :'pandya'},
+        //     { name:'ravi', surname:'vadher'}
+        // ]
+
+        // function add(students,CallBack)
+        // {
+        //     setTimeout(() => {
+        //         student.push(a)
+        //         console.log(student)
+        //         CallBack()
+        //     }, 1000);
+            
+        // }
+
+        // function display()
+        // {
+        //     setTimeout(() => {
+                
+        //          student.forEach(function(a){
+        //              console.log(a)
+        //          })
+
+        //     }, 5000);
+        // }
+       
+        // let a = [
+        //         {name:'sager' , surname :'tankariya'},
+        //         {name :'sujit' , surname : 'mandal'}
+        //     ]
+        
+        // add(a,display)
+
+// ---------------------------------  Promise   ----------------------------------
+
+        // function show()
+        // {
+        //     return new Promise(function (resolve,reject){
+        //         setTimeout(() => {
+        //             const error = true;
+
+        //             if(!error)
+        //             {
+        //                 console.log('resolve all errors...')
+        //                 resolve()
+        //             }
+        //             else
+        //             {
+        //                     console.log('errors occured...')
+        //                     reject()
+        //             }
+        //         }, 1000);
+        //     })
+        // }
+
+        // show().then(function(){
+        //     console.log('kp resolve errors....')
+        // }).catch(function(){
+        //     console.log('not resolved...')
+        // });
+
+    
+
+// ---------------------------------  Async And Await  ----------------------------------
+
+        //  async function show()
+        //  {
+        //     console.log('hello async and await...')
+        //     const a = await fetch('https://api.github.com/users');
+        //     let b = await a.json()
+        //     console.log('promise done...')
+
+        //     return b
+        //  }
+        //     show().then(data => {
+        //         console.log(data)
+        //     })
+
+
+ // -----------------------------    Try - Catch - Finally  ----------------------------------
+        
+            // try
+            // {
+            //      let a = undefined
+            //     if(a == Number)
+            //     {
+            //         console.log('is number....')
+            //     }
+            //     else
+            //     {
+            //         console.log('NAN...')
+            //     }
+                
+                // error occur abcd() id not defined so ..........
+            //     console.log('is try block')
+            //     abcd()
+            //  }
+
+            // catch(error)
+            // {
+            //     console.log(error);
+            // }
+
+            // finally 
+            // {
+            //     console.log('always run this block ...')
+            // }
+</script>
+  
+<!----------------------------------  Event Handler   ---------------------------------->
+
+    <input type="text" onkeyup="change()" onfocus="color()"    id="f1" />
+       
+    <h1 id="f2">dummy text </h1>
+
+    <script>
+
+            function change() 
+            {
+                let data = document.getElementById("f1").value
+                document.getElementById("f2").innerHTML = data
+               
+            }
+            change()
+
+            //Change color event :=
+            function color()
+            {
+                let d1 = document.getElementById('f1').style.backgroundColor='yellow'
+            }
+
+        
+// --------------------------------   Arrow Function   --------------------------------------
+
+               
+                const  n1 = (name) => "hello " +name
+                document.write(n1('kashyap'))
+                document.write("<br>")
+
+
+                //without argument :=
+                const n3 = () => 'hello'
+                document.write(n3())
+                document.write("<br>")
+
+
+                 //with  argument :=
+                const n2 = (a,b) => a * b
+                document.write(n2(10,5))
+                document.write("<br>")
+
+
+                // You cannot use an arrow function as constructor...
+                // let nb1 = () => {};
+                // let sb1 = new nb1(); 
+
+// --------------------------------   This Keyword  --------------------------------------
+
+            // used to refers to current objects....
+
+            // class abc 
+            // {
+            //     constructor(id,name,surname)
+            //     {
+            //         this.id=id
+            //         this.name=name
+            //         this.surname=surname
+            //     }
+            // }
+
+            // let a = new abc(1,'kahsyap','pandya')
+            // document.write(a.id+ " , " +a.name+ " , " +a.surname)
+
+           
+//---------------------------- Other This Example ----------------------------------
+                
+                    //  error in program 
+                    
+            class abc {
+
+            show ()
+            {
+                let id = 1
+                let name = 'kashyap'
+                let surname = 'pandya'
+            }
+            
+            
+            // display(id,name,surname)
+            // {
+            //     this.id=id
+            //     this.name=name
+            //     this.surname=surname
+            // }
+        }
+
+    </script>
+    
+    </body>
+</html>
