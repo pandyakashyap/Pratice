@@ -1,0 +1,209 @@
+<html>
+
+<body>
+    <h1> Module , DataTypes , Type-Converstion </h1>
+
+
+    <script>
+
+        //This Keyword :=> use in regular function...
+
+        // let a1 = {
+        //     name :'kashyap',
+        //     surname:'pandya',
+
+        //     show : function()
+        //     {
+        //         return this.name
+        //     },
+
+        //     display:function()
+        //     {
+        //         return this.surname
+        //     }
+        // }
+        // document.write(a1.show())
+        // document.write("<br>")
+        // document.write(a1.display())
+
+        // ----------------------------------------------------------------------------------------
+
+        //Super keyword :=
+
+        //super keyword is used to call the constructor of its parent class and 
+        // access the parent properties and methods...
+
+        class Car {
+            constructor(brand) {
+                this.carname = brand;
+            }
+            present() {
+                return 'I have a ' + this.carname;
+            }
+        }
+
+        class Model extends Car {
+            constructor(brand, mod) {
+                super(brand);
+                this.model = mod;
+            }
+            show() {
+                return this.present() + ', it is a ' + this.model;
+            }
+        }
+
+        mycar = new Model("Ford", "Mustang");
+        document.write(mycar.show());
+        document.write("<br>")
+
+        // --------------------------------- Type - Conversion -----------------------------------
+        // Type conversion & typecasting means transfer of data from one data type to another...
+
+        document.write(Number(100))
+        document.write("<br>")
+
+        document.write(Number('kashyap'))      //NAN
+        document.write("<br>")
+
+
+        //String() method can convert number to string...
+        document.write(String(100))
+        document.write("<br>")
+
+
+        //Dates to Numbers :=
+        let a = new Date()
+        document.write(a)
+        document.write("<br>")
+
+        document.write(Number(a))
+        document.write("<br>")
+
+
+        let b = a.getTime()
+        document.write(b)
+        document.write("<br>")
+
+
+        //date to string :=
+        document.write(String(a))
+        document.write("<br>")
+
+
+        //datatypes :=>
+        //number , string , boolean , null , undefined , string , object , bigint....
+
+
+        //represente too large integer values
+        let s1 = BigInt(5878451248454578451213245)
+        document.write(s1)
+        document.write("<br>")
+
+
+        //Symbol() =>  return a unique Symbol...
+        let s2 = Symbol("hey")
+        document.write(typeof s2)
+        document.write("<br>")
+
+    </script>
+
+    <!-------------------------------------- Module--------------------------------->
+
+    <script>
+
+        //<scripe type="module">
+
+        // Modules :=> use the import and export keywords to share and receive functionalities from different modules. 
+        //The export keyword is used to make variable, function, class or object accessible to other modules.
+
+        // import message from "./text.js"
+        // document.write(message())
+
+
+        //can import modules into a file in two ways, (i) named exports (ii) default exports.
+
+
+        //name export :=>  used for import specific functionality etc....
+        // import {name,age} from "./test.js"
+        // document.write("name is"+name+ "age is "+age)
+
+
+        //default export :=> import entire data
+        // import msg from "./test.js"
+        // document.write(msg())
+
+
+        // ------------------------------- Date And Time ---------------------------------------
+
+        //it returns date object with the current date and time...
+
+        let d = new Date()
+
+
+        //get fullyear :=
+        let f = d.getFullYear()
+        document.write(f)
+        document.write("<br>")
+
+
+        //get month :=
+        document.write(d.getMonth())
+        document.write("<br>")
+
+
+        //get date :=
+        document.write(d.getDate())
+        document.write("<br>")
+
+
+        //get day :=
+        document.write(d.getDay())
+        document.write("<br>")
+
+
+        //return month :=
+        let month = ["January", "February", "March", "April", "May", "June", "July",
+            "August", "September", "October", "November", "December"]
+
+        let n2 = new Date("2023-02-25")
+        let n3 = month[n2.getMonth()]
+        document.write(n3)
+        document.write("<br>")
+
+
+        //get minutes :=
+        let n4 = a.getMinutes()
+        document.write(n4)
+        document.write("<br>")
+
+
+        //get times :=
+        let n5 = a.getTime()
+        document.write(n5)
+        document.write("<br>")
+
+
+// ----------------------------------- Math Object ---------------------------------------  
+// It allows you to perform mathematical tasks on numbers....
+// Math is not constructor , All properties and methods of Math are static... 
+
+
+
+            //Math Round :=> return nearest integer value...
+            document.write(Math.round(4.6))
+            document.write("<br>")
+        
+
+            //Math Ceil :=> return rounded up nearest integer value...
+            document.write(Math.ceil(5.9))
+            document.write("<br>")
+        
+
+            //Math Random :=> returns a random number between 0 or 1...
+            document.write(Math.random(1))
+
+
+
+    </script>
+</body>
+</html>
