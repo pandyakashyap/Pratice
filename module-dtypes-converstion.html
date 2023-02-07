@@ -183,27 +183,82 @@
         document.write("<br>")
 
 
-// ----------------------------------- Math Object ---------------------------------------  
-// It allows you to perform mathematical tasks on numbers....
-// Math is not constructor , All properties and methods of Math are static... 
+        // ----------------------------------- Math Object ---------------------------------------  
+        // It allows you to perform mathematical tasks on numbers....
+        // Math is not constructor , All properties and methods of Math are static... 
 
 
 
-            //Math Round :=> return nearest integer value...
-            document.write(Math.round(4.6))
+        //Math Round :=> return nearest integer value...
+        document.write(Math.round(4.4))
+        document.write("<br>")
+
+
+        //Math Ceil :=> return rounded up nearest integer value...
+        document.write(Math.ceil(5.7))
+        document.write("<br>")
+
+
+        //Math floor  :=> return rounded down nearest integer value...
+        document.write(Math.floor(4.2))
+        document.write("<br>")
+
+
+        //Math Random :=> returns a random number between 0 or 1...
+        document.write(Math.random(1))
+        document.write("<br>")
+
+
+        //Math Sqrt() static method returns the square root of a number...
+        //document.write(Math.sqrt(5,5))
+
+        // Variable scope :=
+        // (1) Global scope => can be used anywhere in the program.
+
+        // let d1 = 'hello global variable'
+        // function d2()
+        // {
+        //     document.write(d1)
+        // }
+        // d2()
+        // document.write("<br>")
+
+
+        // program to show the change in global variable :=
+        // let d3 = 'hello'
+        // function d4()
+        // {
+        //     document.write(d3)
+        //     document.write("<br>")
+        // }
+        // d4()
+        // d3 = 'hello nice to meet you'
+        // document.write(d3)
+        // document.write("<br>")
+
+
+        //Local variable :=>  can only be accessed within a function...
+        function j1() {
+            let g1 = 'hello'
+            document.write(g1)
             document.write("<br>")
-        
+        }
+        j1()
+        document.write(g1)
+        document.write("<br>")
 
-            //Math Ceil :=> return rounded up nearest integer value...
-            document.write(Math.ceil(5.9))
-            document.write("<br>")
-        
+    </script>
 
-            //Math Random :=> returns a random number between 0 or 1...
-            document.write(Math.random(1))
+    <script>
 
-
+        //Math Sqrt() :=> returns the square root of a number...
+        //5*5 + 5*5
+        function sq(a, b) {
+            return (Math.sqrt((a * a) + (b * b)))
+        }
+        document.write(sq(5, 5))
 
     </script>
 </body>
+
 </html>
