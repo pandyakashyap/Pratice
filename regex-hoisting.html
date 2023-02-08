@@ -1,0 +1,141 @@
+<html>
+    <body>
+        
+        <h1> Regular Expressions and Hoisting</h1>
+
+        <script>
+
+                //  Regex is patterns used to match characterin strings...
+                //  patterns are used with the exec() and test() Methods...
+                //  exec() :=>  returns an array of information or null on a mismatch...
+                //  test() :=>  It returns true or false...
+
+               
+                //Series of digits digit match :=
+                const a = "123"
+                const b = /\b\d{3}\b/
+                const res = (a.match(b))
+                document.write(res)
+                document.write("<br>")
+
+
+                //Series of character match :=
+                const a1 = "kashyap pandya rvdesai kashyap"
+                const a2 = /\b\w{7}\b/
+                //const n2 = /\b[ka]\w+/g;
+                const a3 = a1.match(a2)
+                document.write(a3)
+                document.write("<br>")
+
+
+                //couting vowels :=
+                // g => Global match in strings....
+
+                const n4 = "hello good morning AEIOU javascript and react js is very best"
+                const n5 = /[AEIOUaeiiou]/g
+                document.write(n4.match(n5).length)
+                document.write("<br>")
+                
+                
+                //test() method :=>  return true or false......
+                // let s1 = /kashyap/
+                // let s2 = prompt('enter name')
+                // let s3 = s1.test(s2)
+                // document.write(s3)
+                //document.write("<br>")
+                
+
+
+                //exec() method :=  return value in array if match.......
+                // let s4 = /kashyap/
+                // let s5 = prompt('enter name')
+                // let s6 = s4.exec(s5)
+                // document.write(s6)
+                //document.write("<br>")
+                
+
+
+                //match() :=>  will return array of results or null.....
+                let t1 = /kashyap/g;
+                let t2 = "kashyap pandya ravi kashyap"
+                let t3 = t2.match(t1)
+                document.write(t3)
+                document.write("<br>")
+                
+
+
+                //search() :=>  will retuen index of 1st match , not macth will return -1...
+                let d1 = /nice/g
+                let d2 = 'hello nice to meet you'
+                //let d2 = 'hello to meet you'        // :=>  will return error -1
+                let d3 = d2.search(d1)
+                document.write(d3)
+                document.write("<br>")
+                
+
+                //replace()  :=>  return new string with all replace......
+                // take 2 arguments
+                let k1 = /ravi/g
+                let k2 = 'this is great ravi and also ravi bhai great'
+                let k3 = k2.replace(k1,'kashyap')
+                document.write(k3)
+                document.write("<br>")
+               
+
+                //split()  :=>  split string
+                //when get (- &) sign then split string by (,) sign....
+
+                let z1 = /[-&]/
+                let z2 = 'hello-good-morning &nice&to&meet&you'
+                let z3 = z2.split(z1)
+                document.write(z3)
+                document.write("<br>")
+               
+                
+                //Mobile No format :=>
+
+                // let n = prompt('enter no')
+                // let n1 = /\b\d{3}-\d{3}-\d{4}/
+                // let n2 = n.match(n1)
+                // if(n2==n)
+                // {
+                //     document.write(n2)
+                // }
+                // else{
+                //     alert('wrong no pattern......')
+                // }
+                
+// -----------------------------------------------------------------------------------------
+                //email and password matches :=>
+                
+                // let j = prompt('enter your email id')
+                // //let m1 = /\b\w{1,5}\@\w{5}\.\w{3}/
+                let m1 =   /^\w[A-Z]{2}\w[a-z0-9]{5,15}\@\w{5}\.\w{3}$/
+
+                // let m2 = j.match(m1)
+                // if(m2 == j)
+                // {
+                //     alert("Valid email address!");
+                // }
+                // else{
+                //     alert("Invalid email address!");
+                // }
+
+                //password :=>
+                let k = prompt('enter your password')
+                // //let x1 = /^\w[A-Z{3}]\w[a-z0-9]+$/
+                let x1 = /^\w[A-Z{3}]\w[a-z0-9\#\@\&\*]+$/
+
+                let x2 = k.match(x1)
+                if(x2 == k)
+                {
+                    alert("Valid Password!");
+                }
+                else
+                {
+                     alert("Invalid Password!");
+                }
+                
+        </script>
+    </body>
+</html>
