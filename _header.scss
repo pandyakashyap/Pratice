@@ -1,0 +1,42 @@
+$bckcolor:skyblue;
+$color:red;
+$hover:green;
+
+h1{
+    font-size: 50px;
+    //background-color: $bckcolor;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 1px 200px 1px 1px;
+}
+h1:hover{
+    font-size: 200px;
+}
+li{
+    float: left;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+li a{
+    font-size: 40px;
+    background-color: pink;
+    color: $hover;
+    width: 260px;
+    height: 11%;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-radius: 3px;
+    margin: -10px -15px 1px 1px;
+}
+
+li a:hover{
+    background-color: $bckcolor;
+}
+li a:active{
+    color: yellow;
+    background-color: $color;
+}
+

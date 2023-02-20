@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+<style>
+
+.container{
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: pink;
+    width: 900px;
+    height: 200px;
+    border-radius: 25px;
+}
+
+@media only screen and (max-width:800px)
+{
+    .container{
+        background-color: aqua;
+        font-size: larger;
+        width: 550px;
+        height: 100px;
+        border-radius: 10px;
+    }
+}
+.li{
+    visibility: hidden;
+}
+@media only screen and (max-width:1000)
+{
+        .li{
+            visibility:visible;
+        }
+}
+</style>
+        <body>
+
+            <div class="container">
+                <p> Sass (short for syntactically awesome style sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). 
+                    SassScript is the scripting language itself.</p>
+                 </p>
+
+                 <img class="i1" src="./scss.png"/>
+            </div>
+        </body>
+    </head>
+</html>

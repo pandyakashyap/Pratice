@@ -1,0 +1,42 @@
+@mixin border()
+{
+  -webkit-border-radius:10px;
+   border-radius: 10px;
+}
+@mixin Hover()
+{
+    background-color: yellow;
+    cursor: pointer;
+    border-style: groove;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#first {
+   width: 200px;
+   height: 200px;
+   background-color: darkslateblue;
+   margin-top: 90px;
+   font-family: Arial, Helvetica, sans-serif;       //font-family , cursor is common so used in
+   cursor: pointer;                                 // second , third using (extend) keyword... 
+   @include border();
+}
+
+#second{
+    width: 400px;
+    padding: 35px;
+    background-color: darkgreen;
+    margin-left: 350px;
+    @include border();
+    @extend #first;
+}
+
+#third{
+    width: 150px;
+    height: 260px;
+    background-color: pink;
+    margin-left: 1100px;
+    margin:1px 5px 50px;
+    @include border();
+    @extend #first;
+}
